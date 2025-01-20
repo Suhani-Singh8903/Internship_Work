@@ -1,0 +1,93 @@
+<!-- <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function showAlert(){
+                alert(" Button clicked!!");
+            }
+        </script>
+        <h1 style="font-weight: bold;">Basic HTML </h1>
+        </head>
+        <body style="background-color: bisque;">
+            <p1 style="font-size: larger; color: #000; font-family: 'Times New Roman', Times, serif;"> Content  </p1>
+            <br>
+            <a href="https://www.w3schools.com">
+                <img src="Screenshot 2025-01-08 024143.png" width="200" height = "200"></a>
+            <br>
+            <br>
+            <button name="button" onclick="showAlert()">JAVASCRIPT CODE</button>
+        </body>
+    
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive HTML</title>
+    <style>
+        body {
+            background-color: bisque;
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h1 {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            font-size: larger;
+            color: #000;
+            text-align: center;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        @media (max-width: 600px) {
+            p {
+                font-size: medium;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .button-container button {
+                padding: 10px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <script>
+        function showAlert() {
+            alert("Button clicked!!");
+        }
+    </script>
+</head>
+<body>
+    <h1>Basic HTML</h1>
+    <p>Content</p>
+    <div class="image-container">
+        <a href="https://www.w3schools.com">
+            <img src="Screenshot 2025-01-08 024143.png" alt="Responsive Image">
+        </a>
+    </div>
+    <div class="button-container">
+        <button name="button" onclick="showAlert()">JAVASCRIPT CODE</button>
+    </div>
+</body>
+</html>
