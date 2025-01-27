@@ -1,7 +1,7 @@
 import express, { json } from 'express';
 import pool from './db.js';
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 
 // Middleware to parse JSON request bodies
 app.use(json());
