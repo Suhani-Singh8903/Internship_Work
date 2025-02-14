@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Line Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .chart-container {
+            width: 80%; /* Increased width */
+            max-width: 900px; /* Maximum size */
+            height: 500px; /* Increased height */
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2> Marks Out of 300</h2>
+    <div class="chart-container">
+        <canvas id="marksChart"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('marksChart').getContext('2d');
+
+        const data = {
+            labels: ["Test 1", "Test 2", "Test 3", "Test 4", "Test 5", "Test 6","Test 7","Test 8","Test 9"],
+            datasets: [
+                {
+                label: "Marks",
+                data: [26, 138, 33, 101, 75, 101,140,120,137],
+                borderColor: "rgba(54, 162, 235, 1)",
+                backgroundColor: "rgba(54, 162, 235, 0.2)",
+                borderWidth: 2,
+                pointRadius: 4,
+                pointBackgroundColor: "blue",
+                fill: true
+                },
+
+                {
+                    label: "Target (150 Marks)",
+                    data: [150, 150, 150, 150, 150, 150,150,150,150], // Constant line at 150
+                    borderColor: "green",
+                    borderWidth: 2,
+                    borderDash: [100,0], // Dashed line
+                    pointRadius: 0 // No points on target line
+                }
+            ]
+        };
+
+        new Chart(ctx, {                                                                                                                                 
+            type: "line",
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // Allows custom size
+                scales: {
+                    y: {
+                        beginAtZero: true, //
+                        max: 300
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
