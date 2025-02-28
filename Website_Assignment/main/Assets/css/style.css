@@ -368,17 +368,22 @@
     padding:50px;
 }
 
+.why-choose-us section{
+    position:relative;
+    align-items:center;
+
+}
 .Why-choose-us-left img{
     width: 149.1%;
     margin-left: -20rem;
 }
 
-.Why-choose-us-content{
+/* .Why-choose-us-content{
     margin-top: -45.2rem;
     padding-top: 5rem;
     padding-bottom: 12rem;
     padding-right: 2rem;
-}
+} */
 
 .section-5-info {
     position: relative;
@@ -407,20 +412,21 @@ overflow: hidden;
 clip-path: polygon(0 0, 100% 0, 100% -24%, 83% 100%, 0 100%);
 }
 .section-5-card-1-logo{
-width: 50px;
-height: 50px;
+width: 43px;
+height: 43px;
 background-color: #7166F5;
 border-radius: 50%;
 position: absolute;
-top: 20px;
-left: 30px;
+top: 15px;
+left: 24px;
 }
 .section-5-card-1 p{
 font-size: 14px;
 font-weight: 500;
 color: #ffffff;
-padding-left: 70px;
-padding-top: 20px;
+padding-left: 30px;
+padding-bottom:5px;
+padding-right:140px;
 
 
 }
@@ -431,14 +437,253 @@ background-image: url(../images/section_5_1.png);
 background-size: 100% 100%;
 background-repeat: no-repeat;
 border-radius: 10px;
-margin-left: -180px;
+margin-left: -135px;
 margin-top: 33px;
 /* clip-path: polygon(0 0, 100% 0, 100% 9%, 61% 100%, 0 100%); */
 clip-path: polygon(0 0, 100% 0, 100% -24%, 83% 100%, 0 100%);
 }
 
 .Why-choose-us-right img{
-    width:143.7%;
-    margin-left: 0.2rem;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    object-fit: cover;
+
 }
 
+.testimonial-container {
+    
+    
+    position: relative;
+}
+
+/* Swiper Styling */
+.swiper {
+    padding: 40px 0;
+}
+
+/* Flexbox to Align Swiper Slides */
+.swiper-wrapper {
+    display: flex; /* Ensures slides appear side by side */
+    gap:40px;
+}
+
+/* Swiper Slide Styling */
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    width: 100%; /* Ensures each slide takes up full width for one card per slide */
+}
+
+/* Testimonial Card Styling */
+.testimonial-card {
+    background: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* text-align: center; */
+    position: relative;
+    overflow: visible;
+    height:290px;
+}
+
+/* Profile Image Styling */
+.profile-img {
+
+        width: 80px;
+        height: 80px;
+        /* border-radius: 50%; */
+        position: absolute;
+        top: -45px;
+        left: 50px;
+        /* border: 3px solid white; */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+/* Heading Styling */
+h3 {
+    margin: 0px 0 0px;
+
+}
+
+/* Position Text Styling */
+.position {
+    color: gray;
+    font-size: 14px;
+}
+
+/* Testimonial Text Styling */
+.testimonial-text {
+    font-size: 19px;
+    color: #555;
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* Star Rating Styling */
+.stars {
+    color: #6c5ce7;
+    font-size: 25px;
+    text-align: left;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #6c5ce7;
+}
+
+/* Pagination Styling */
+.swiper-pagination {
+    position: relative;
+    bottom: -10px;
+}
+
+.form .container .nav-pills .nav-link{
+    color:#232325 !important;
+    background-color: #f1f1f1;
+    border-radius: 0px;
+    border-top-right-radius: 30px !important;
+    height:120%;
+    
+}
+
+.form .container .nav-pills  .nav-link.active{
+     background-color:#6C63FF !important;
+     color : #fff !important;
+     border-radius: 0px;
+     border-top-right-radius: 30px !important;
+     height:120%;
+
+}
+
+.form .container .nav-pills .nav-link:hover{
+    background-color:#6C63FF !important;
+     color : #fff !important;
+     border-radius: 0px;
+     border-top-right-radius: 30px !important;
+     height:120%;
+    }
+
+.form-input .col-md-5 img{
+    padding : 20px;
+    object-fit: contain;
+    position: relative;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+}
+
+.form-input .col-md-7{
+    padding: 35px;
+    padding-left: 60px;
+}
+ .form-control {
+    padding:10px;
+    margin-bottom:20px;
+ }
+
+ .form-select{
+    padding:10px;
+    margin-bottom:20px;
+ }
+
+ .slider-container {
+    display: flex;
+    align-items: center;
+    gap: 28rem;
+    
+}
+
+.label {
+    font-weight: bold;
+    color: #333;
+}
+
+.range-wrapper {
+    flex-grow: 1;
+    position: relative;
+    margin-bottom:20px;
+}
+
+.range-slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+    transition: background 0.15s ease-in-out;
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #1e1e2d;
+    border-radius: 20%;
+    cursor: pointer;
+    border: none;
+    position: relative;
+}
+
+.value {
+    font-weight: bold;
+}
+.team .container{
+    position:relative;
+    
+}
+.team .card{
+    border: none;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.2)
+}
+.blog-posts{
+    padding-bottom: 200px;
+}
+.blog-posts .card{
+    border:none;
+    height:21rem;
+}
+
+.blog-posts .card-body{
+    
+    /* position:  absolute; */
+    z-index: 3;
+    margin-top: -59px;
+    background-color: #ffffff;
+    border: none;
+    width: calc(100% - 20px);
+
+}
+
+.blog-posts .card-body::after{
+    content: "";
+    position: absolute;
+    top: 296px;
+    right: 20px;
+    width: 17%;
+    height: 59px;
+    background-color: #ffffff;
+    z-index: 2;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.blog-posts .list-group-item{
+    background-color: #737092;
+    width: calc(100% - 20px);
+    color: #ffffff;
+}
+
+.card-img-top{
+    min-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}

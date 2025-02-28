@@ -7,7 +7,8 @@
     <title>Insur</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Bootstrap Icons (for bi-* icons) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -60,10 +61,10 @@
         </div>
     </div>
     <!--Navbar-->
-    <div class="navbar">
-        <div class="container-fluid">
+    <div class="navbar sticky-top">
+        <div class="container-fluid ">
 
-            <div class=" navbar-expand-lg navbar-width">
+            <div class=" navbar-expand-lg navbar-width ">
                 <div class="row ">
                     <!-- Left: Contact Info -->
                     <div class="col-md-3 text-md-start text-center contact-info left-column"
@@ -130,7 +131,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <img src="Assets/images/image1.png" alt="Insurance Banner">
+                    <img src="Assets/images/image1.png" alt="Insurance Banner" style="width:147%">
                 </div>
             </div>
 
@@ -390,11 +391,17 @@
         </div>
     </div>
     <!--Why Choose Us-->
-    <section class="why-choose-us">
+    <section class="why-choose-us" style="
+    background-color: #211F38;
+    position: relative;
+    min-height: 700px;
+    align-items: center;
+    display: flex;
+">
         <div class="container">
             <div class="row">
-                <div class="col-6 Why-choose-us-left" style="padding :0px;">
-                    <img src="Assets/images/section_5_2.png" alt="Why Choose Us">
+                <div class="col-6 Why-choose-us-left">
+                    
                     <div class="Why-choose-us-content">
                         <div class="section-5-info">
                             <div class="section-5-smallhead" style="color: #737092;">
@@ -423,11 +430,11 @@
                                     <div class="section-5-card-1-logo">
         
                                     </div>
-                                    <p style="font-weight: bold;">Save Your Money</p>
+                                    <p style="font-weight: bold;padding-top: 24px;padding-left: 76px;">Save Your Money</p>
                                     <p>There are many variations of passages of Lorem Ipsum </p>
                                 </div>
                                 <div class="section-5-card-2">
-                                    card 2
+                                    
         
                                 </div>
                             </div>
@@ -474,38 +481,166 @@
     <!--Reviews-->
     <section class="reviews">
         <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <p>Card 1</p>
-                </div>
-                <div class="col-6">
-                    <p>Card 2</p>
+            <div class="header" style="text-align : center;">
+                <p style="font-weight:470;">Testimonials</p>
+                <h1 style="font-weight:700;"> See What They are Talking<br>
+                    About?</h1>
+            </div>
+            <div class="testimonial-container">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Card 1 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <img src="Assets/images/section_3_2.png" alt="Robert Smith" class="profile-img">
+                                <h3>Robert Smith</h3>
+                                <p class="position">Marketing Manager</p>
+                                <p class="testimonial-text">
+                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
+                                </p>
+                                <div class="stars">★★★★★</div>
+                                <div class="wave"></div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <img src="Assets/images/section_3_2.png" alt="Luna Martin" class="profile-img">
+                                <h3>Luna Martin</h3>
+                                <p class="position">Web Developer</p>
+                                <p class="testimonial-text">
+                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
+                                </p>
+                                <div class="stars">★★★★★</div>
+                                <div class="wave"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- Navigation Buttons -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
     <!--Form-->
     <section class="form">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <p>Form</p>
-                </div>
+            <div class="header" style="text-align : center;">
+                <p style="font-weight:470;">Get a free Estimate</p>
+                <h1 style="font-weight:700;"> Get an Insurance quote to <br>
+                    Get Started</h1>
             </div>
+        <row>
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"> • Car Insurance</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"> • Life Insurance</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-home-insurance-tab" data-bs-toggle="pill" data-bs-target="#pills-home-insurance" type="button" role="tab" aria-controls="pills-home-insurance" aria-selected="false"> • Home Insurance</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-health-tab" data-bs-toggle="pill" data-bs-target="#pills-health" type="button" role="tab" aria-controls="pills-health" aria-selected="false"> • Health Insurance</button>
+                </li>
+                
+              </ul>
+              <!-- <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+
+              </div> -->
+              <!-- <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0"></div>
+              <div class="tab-pane fade" id="pills-home-insurance" role="tabpanel" aria-labelledby="pills-home-insurance-tab" tabindex="0"></div>
+              <div class="tab-pane fade" id="pills-health" role="tabpanel" aria-labelledby="pills-health-tab" tabindex="0"></div> -->
+
+        </row>
+        <row class="form-input" style="display:flex; background-color:#f1f1f1">
+            <div class="col-md-5">
+               <img src ="Assets/images/form-image.png">
+            </div>
+            <div class="col-md-7">
+                <input type="text" class="form-control" id="name" placeholder="Full Name">
+                <input type="text" class="form-control" id="email" placeholder="Email Address">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Subject: Type of Insurance </option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <div class="slider-container">
+                    <label class="label">Limits of Balance:</label>
+                    <span class="value" id="rangeValue" >$4000</span>
+                </div>
+                <div class="range-wrapper">
+                    <input type="range" min="0" max="10000" value="4000" class="range-slider" id="balanceRange">
+                </div>
+                <script>
+                    const rangeInput = document.getElementById("balanceRange");
+                    const rangeValue = document.getElementById("rangeValue");
+                
+                    function updateSlider() {
+                        rangeValue.textContent = `$${rangeInput.value}`;
+                        const percentage = ((rangeInput.value - rangeInput.min) / (rangeInput.max - rangeInput.min)) * 100;
+                        rangeInput.style.background = `linear-gradient(to right, #7b5cff ${percentage}%, #ddd ${percentage}%)`;
+                    }
+                
+                    // Update slider on page load
+                    updateSlider();
+                
+                    // Update slider when the user moves the range input
+                    rangeInput.addEventListener("input", updateSlider);
+                </script>
+                <button class="btn py-2 px-4" style="background-color: #7166F5; color: white">
+                    <div class="section-5-discover-button-text">Get a quote Now</div>
+                </button>
+            </div>
+            
+            
+
+        </row>
+            
         </div>
     </section>
     <!--Team-->
     <section class="team">
         <div class="container">
-            <div class="row">
+            <div class="header" style="text-align : center;">
+                <p style="font-weight:470;">Ou   r Team Member</p>
+                <h1 style="font-weight:700;"> Meet our experienced team<br>
+                    About?</h1>
+            </div>
+            <div class="row" style="display:flex">
                 <div class="col-4">
-                    <p>Card 1</p>
+                    <div class="card" style="width: 19rem;">
+                        <img src="Assets/images/section-8-1.png" class="card-img-top" alt="...">
+                        <div class="card-body " style="text-align:center">
+                          <h3 class="card-text">Mike Hardson</h3>
+                          <p> Designer</p>
+                        </div>
+                      </div>
                 </div>
                 <div class="col-4">
-                    <p>Card 2</p>
+                    <div class="card" style="width: 19rem;">
+                        <img src="Assets/images/section-8-2.png" class="card-img-top" alt="...">
+                        <div class="card-body " style="text-align:center">
+                          <h3 class="card-text">Jenny Wilson</h3>
+                          <p> Manager</p>
+                        </div>
+                      </div>
                 </div>
+                
                 <div class="col-4">
-                    <p>Card 3</p>
+                    <div class="card" style="width: 19rem;">
+                        <img src="Assets/images/section-8-3.png" class="card-img-top" alt="...">
+                        <div class="card-body " style="text-align:center">
+                          <h3 class="card-text">Robert Fox</h3>
+                          <p> Director</p>
+                        </div>
+                      </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -513,15 +648,47 @@
     <!--Blog posts-->
     <section class="blog-posts">
         <div class="container">
+            <div class="header" style="text-align : center;">
+                <p style="font-weight:470;">Article</p>
+                <h1 style="font-weight:700;"> Latest News and Articles from <br>
+                    the Blog Posts</h1>
+            </div>
             <div class="row">
                 <div class="col-4">
-                    <p>Blog Post 1 Card 1</p>
+                    <div class="card" style="width: 21rem;">
+                        <img src="Assets/images/section_3_2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-title">2 comment</p>
+                          <h5 class="card-text">Its a long established fact that a leader</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Read More</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-4">
-                    <p>Blog Post 1 Card 2</p>
+                    <div class="card" style="width: 21rem;">
+                        <img src="Assets/images/section-9-2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-title">2 comment</p>
+                          <h5 class="card-text">Its a long established fact that a leader</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Read More</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-4">
-                    <p>Blog Post 1 Card 3</p>
+                    <div class="card" style="width: 21rem;">
+                        <img src="Assets/images/image1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-title">2 comment</p>
+                          <h5 class="card-text">Its a long established fact that a leader</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Read More</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -531,6 +698,7 @@
         <p>Footer</p>
     </footer>
     <link rel="stylesheet" href="Assets/css/style.css">
+    
 </body>
 
 </html>

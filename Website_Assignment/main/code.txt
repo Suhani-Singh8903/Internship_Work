@@ -1,0 +1,96 @@
+code 
+
+
+.nav-tabs .nav-item {
+    margin-right: 3px;
+    flex-grow: 0;
+}
+.tab-content{
+    
+        
+        --bs-card-border-radius: var(--bs-border-radius);
+       
+        --bs-card-cap-color: ;
+        --bs-card-height: ;
+        --bs-card-color: ;
+        
+        --bs-card-img-overlay-padding: 1rem;
+     
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        height: var(--bs-card-height);
+       
+        word-wrap: break-word;
+        background-color: var(--bs-card-bg);
+        background-clip: border-box;
+        border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+        border-radius: var(--bs-card-border-radius);
+        
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+    
+.nav-tabs .nav-link {
+    border: none;
+    color: #7166f5;
+    font-weight: 600;
+    padding: 11px 14px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 15px;
+}
+
+.nav-tabs .nav-link .active {
+    color: #ffffff;
+    background-color: #7166f5;
+    
+}
+
+li>.active {
+    background-color: #6c5ce7;
+    color: white;
+}
+.card-custom {
+    
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.form-container {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.btn-custom {
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 12px;
+}
+.btn-custom:hover {
+    background-color: #5a4bcf;
+}
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+.tab-content {
+    margin-top: 0;
+}
