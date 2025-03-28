@@ -1,8 +1,13 @@
 {
   "dependencies": {
+    "axios": "^1.8.4",
     "bcrypt": "^5.1.1",
     "bootstrap-icons": "^1.11.3",
+    "cloudinary": "^2.6.0",
+    "dotenv": "^16.4.7",
     "jsonwebtoken": "^9.0.2",
+    "node": "^18.20.8",
+    "nodemon": "^3.1.9",
     "pg": "^8.13.1"
   }
 }

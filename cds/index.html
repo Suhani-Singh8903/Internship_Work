@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Test Progress Tracker</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        #graph {
+            width: 85%;
+            max-width: 1000px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Mock Test Progress Tracker</h1>
+    <div id="graph"></div>
+    <script>
+        var tests = ["Test 1", "Test 2"];
+        var english_scores = [56.25,0];
+        var gat_scores = [22.75,0];
+        var aggregate_scores = [];
+        
+        var max_length = Math.max(english_scores.length, gat_scores.length);
+        for (let i = 0; i < max_length; i++) {
+            let english = english_scores[i] || 0;
+            let gat = gat_scores[i] || 0;
+            aggregate_scores.push(english + gat);
+        }
+        
+        var trace1 = {
+            x: tests,
+            y: english_scores,
+            mode: 'lines+markers',
+            name: 'English (out of 100)',
+            line: { color: '#007bff', width: 3 }
+        };
+
+        var trace2 = {
+            x: tests,
+            y: gat_scores,
+            mode: 'lines+markers',
+            name: 'GAT (out of 100)',
+            line: { color: '#ff5733', width: 3 }
+        };
+
+        var trace3 = {
+            x: tests,
+            y: aggregate_scores,
+            mode: 'lines+markers',
+            name: 'Aggregate (out of 200)',
+            line: { color: '#28a745', width: 3 }
+        };
+
+        var layout = {
+            title: { text: 'Mock Test Progress Tracker', font: { size: 20, color: '#333' } },
+            plot_bgcolor: '#f9f9f9',
+            paper_bgcolor: 'white',
+            xaxis: { title: 'Mock Tests', gridcolor: '#ddd' },
+            yaxis: { title: 'Scores', range: [0, 200], gridcolor: '#ddd' },
+            shapes: [{
+                type: 'line',
+                x0: 0,
+                x1: 1,
+                xref: 'paper',
+                y0: 150,
+                y1: 150,
+                line: { color: 'red', width: 2, dash: 'dash' }
+            }],
+            font: { family: 'Poppins, sans-serif', size: 14, color: '#333' }
+        };
+
+        Plotly.newPlot('graph', [trace1, trace2, trace3], layout);
+    </script>
+</body>
+</html>
