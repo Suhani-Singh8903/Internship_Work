@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 const Form = () => {
   const [title, setTitle] = useState("");
@@ -7,6 +8,7 @@ const Form = () => {
   const [file, setFile] = useState(null);
   const [tags, setTags] = useState([]);
   const [tagInput, setTagInput] = useState("");
+  const [image, setImage] = useState("")
 
   const handleAddTag = () => {
     if (tagInput.trim() !== "" && !tags.includes(tagInput.trim())) {
@@ -19,11 +21,38 @@ const Form = () => {
     setTags(tags.filter((tag) => tag !== tagToRemove));
   };
 
+  function  previewFiles(file) { 
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+
+    reader.onloadend = () => {
+         setImage(reader.result);
+         
+    }
+    console.log (image);
+  }
+
   const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
+    const file = (e.target.files[0]);
+    console.log(file);
+    setFile(file);
+    previewFiles(file)
   };
 
-  const handleSubmit = (e) => {
+  
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    const result = await axios.post("http://localhost:3000",{
+        image : image
+    })
+    try {
+        console.log(result); 
+    }
+    catch (error) {
+        console.error(error);
+    }
+
     e.preventDefault();
     console.log({
       title,
@@ -64,8 +93,11 @@ const Form = () => {
               <label className="block text-gray-400 text-sm mb-2">Upload a file:</label>
               <input
                 type="file"
-                onChange={handleFileChange}
+                id = 'fileInput' 
+                onChange={handleFileChange} required 
+                accept = 'image/png, image/jpeg, image/jpg, image/gif'
                 className="w-full px-3 py-2 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+
               />
             </div>
             <div className="flex items-center space-x-2">
@@ -108,6 +140,7 @@ const Form = () => {
               Submit
             </button>
           </form>
+          <img src = {image} alt = " " />
         </div>
       </div>
     </div>
